@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.router = void 0;
+const express_1 = require("express");
+const messageController_1 = require("./controllers/messageController");
+const webhookController_1 = require("./controllers/webhookController");
+const connectionController_1 = require("./controllers/connectionController");
+const router = (0, express_1.Router)();
+exports.router = router;
+router.put("/api/setWebHook", webhookController_1.webHookController.setWebHook);
+router.post("/api/sendText", messageController_1.messageController.sendText);
+router.post("/api/sendImage", messageController_1.messageController.sendImage);
+router.get("/api/connectBaileys", connectionController_1.connectionController.connectBaileys);
+router.get("/api/connectVenom", connectionController_1.connectionController.connectVenom);
