@@ -7,4 +7,4 @@ const app_1 = require("./app");
 const bot_1 = __importDefault(require("../baileys/bot"));
 (0, bot_1.default)();
 // venom();
-new app_1.App().server.listen(44656);
+new app_1.App().server.listen(process.env.PORT || 3000);
