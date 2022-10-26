@@ -20,8 +20,8 @@ class App {
     }
     middleware() {
         this.server.use(express_1.default.json());
-        this.server.get("/teste", (req, res) => {
-            res.send("<br>Hello world!");
+        this.server.get("/QRCode", (req, res) => {
+            res.sendFile('QRCode.html');
         });
         // swagger docs
         this.server.use('/api/docs', swaggerUi.serve, swaggerUi.setup(this.swaggerDocument, null, null, null));
